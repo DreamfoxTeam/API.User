@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,8 +34,12 @@ namespace Project.API.User.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseMvc();
+            app.Run(async (context) => 
+            {
+                byte[] bytes = Encoding.ASCII.GetBytes("API User");
+                await context.Response.Body.WriteAsync(bytes, 0, bytes.Length);
+            });
         }
     }
 }
