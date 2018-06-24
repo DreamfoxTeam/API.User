@@ -9,6 +9,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Project.API.User.Business.Interface;
+using Project.API.User.Business.Interface.Repositories;
+using Project.API.User.Business.Services;
+using Project.API.User.Repository.Data;
 
 namespace Project.API.User.WebApi
 {
@@ -24,6 +28,12 @@ namespace Project.API.User.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserRepository, UserRepository>(serviceProvider =>
+            {
+                var connectionString = Configuration.GetConnectionString("DefaultConnection");
+                return new UserRepository(connectionString);
+            });
             services.AddMvc();
         }
 

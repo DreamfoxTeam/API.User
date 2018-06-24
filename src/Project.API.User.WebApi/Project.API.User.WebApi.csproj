@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Project.API.User.Business\Project.API.User.Business.csproj" />
+    <ProjectReference Include="..\Project.API.User.Repository\Project.API.User.Repository.csproj" />
   </ItemGroup>
 
 </Project>
