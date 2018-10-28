@@ -3,6 +3,8 @@ using MySql.Data.MySqlClient;
 using Project.API.User.Business.Interface.Repositories;
 using Project.API.User.Repository.Queries;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Project.API.User.Repository.Data
 {
@@ -24,6 +26,12 @@ namespace Project.API.User.Repository.Data
             {
                 conexao.Execute(UserQuery.Save);
             }
+        }
+
+        public string GetUser(long userCode)
+        {
+            var users = new List<string>() { "User 1", "User 2", "User 3" };
+            return users.FirstOrDefault(k => k.Contains(userCode.ToString()));
         }
     }
 }

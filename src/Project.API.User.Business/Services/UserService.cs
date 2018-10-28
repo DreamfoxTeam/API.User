@@ -24,9 +24,8 @@ namespace Project.API.User.Business.Services
             _userRepository = repository;
         }
 
-        public UserResponse Save(UserRequest request)
-        {
-            throw new NotImplementedException();
-        }
+        public string GetUser(long userCode) => _userRepository.GetUser(userCode);
+
+        public UserResponse Save(UserRequest request) => throw new NotImplementedException();
     }
 }
