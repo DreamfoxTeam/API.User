@@ -14,5 +14,12 @@ namespace Project.API.User.Business.Interface
         /// <param name="request">Object with user values</param>
         /// <returns>Return an object with a status of request</returns>
         UserResponse Save(UserRequest request);
+
+        /// <summary>
+        /// This method will get the user name.
+        /// </summary>
+        /// <param name="userCode">User code</param>
+        /// <returns>Return the user name</returns>
+        string GetUser(long userCode);
     }
 }

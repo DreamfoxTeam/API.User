@@ -40,5 +40,12 @@ namespace Project.API.User.WebApi.Controllers
         {
             return new string[] { "User 1", "User 2" };
         }
+
+        [HttpGet]
+        [Route("{userId}")]
+        public string Get(long userId)
+        {
+            return _userService.GetUser(userId);
+        }
     }
 }
