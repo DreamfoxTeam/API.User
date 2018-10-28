@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using Project.API.User.Business.Interface.Repositories;
 using Project.API.User.Repository.Queries;
