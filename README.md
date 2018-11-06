@@ -10,6 +10,7 @@ This repository has REST services from User domain.
 
 To execute this project, open the terminal in folder project and execute the commands:
 ```
+dotnet restore
 dotnet build
 dotnet run
 ```
