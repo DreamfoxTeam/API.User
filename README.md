@@ -1,13 +1,14 @@
 # Dreamfox Backend User
 
 Este repositório contém os serviços REST do domínio Usuário.
+This repository has REST services from User domain.
 
-## Tecnologias
+## Technology:
 * ASP.NET Core 2.0
 * WebApi
 
 
-Para executar o projeto, abra o terminal na pasta do projeto e execute os seguintes códigos:
+To execute this project, open the terminal in folder project and execute the commands:
 ```
 dotnet build
 dotnet run
