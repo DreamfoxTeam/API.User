@@ -1,6 +1,5 @@
-# Dreamfox Backend User
+﻿# Dreamfox Backend User
 
-Este repositório contém os serviços REST do domínio Usuário.
 This repository has REST services from User domain.
 
 ## Technology:
