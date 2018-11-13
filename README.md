@@ -1,4 +1,4 @@
-﻿# Dreamfox Backend API.User
+﻿# Dreamfox Backend MyDream.API.User
 
 This repository has REST services from User domain.
 
